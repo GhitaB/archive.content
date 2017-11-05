@@ -21,6 +21,7 @@
     <element value="plone.app.dexterity.behaviors.metadata.IBasic" />
     <element value="plone.app.dexterity.behaviors.metadata.ICategorization" />
     <element value="plone.app.dexterity.behaviors.metadata.IPublication" />
+    <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer" />
   </property>
 
   <!-- View information -->

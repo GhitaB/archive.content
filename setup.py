@@ -28,6 +28,7 @@ setup(name='archive.content',
       install_requires=[
           'setuptools',
           'plone.app.dexterity',
+          'collective.dexteritytextindexer',
       ],
       entry_points="""
       # -*- Entry points: -*-
