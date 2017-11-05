@@ -13,7 +13,7 @@
   <property name="allow_discussion">False</property>
 
   <!-- schema and class used for content items -->
-  <property name="schema">archive.content.interfaces.IEmail</property>
+  <property name="schema">archive.content.interfaces.email.IEmail</property>
   <property name="klass">archive.content.content.email.Email</property>
 
   <property name="behaviors">

@@ -1,6 +1,6 @@
 <layers>
   <layer
     name="archive.content"
-    interface="archive.content.interfaces.IArchiveContentInstalled"
+    interface="archive.content.interfaces.email.IArchiveContentInstalled"
     />
 </layers>
