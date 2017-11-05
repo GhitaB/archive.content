@@ -6,11 +6,11 @@
 
   <!-- Email view -->
   <browser:page
-    for="archive.content.interfaces.IEmail"
+    for="archive.content.interfaces.email.IEmail"
     name="view"
     template="templates/email.pt"
     class=".email.EmailView"
-    layer="archive.content.interfaces.IArchiveContentInstalled"
+    layer="archive.content.interfaces.email.IArchiveContentInstalled"
     permission="zope2.View"
     />
 
