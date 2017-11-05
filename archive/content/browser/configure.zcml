@@ -1,0 +1,17 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:faceted="http://namespaces.zope.org/faceted"
+  i18n_domain="archive.content">
+
+  <!-- Email view -->
+  <browser:page
+    for="archive.content.interfaces.IEmail"
+    name="view"
+    template="templates/email.pt"
+    class=".email.EmailView"
+    layer="archive.content.interfaces.IArchiveContentInstalled"
+    permission="zope2.View"
+    />
+
+</configure>

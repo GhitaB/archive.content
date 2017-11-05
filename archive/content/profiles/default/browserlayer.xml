@@ -1,0 +1,6 @@
+<layers>
+  <layer
+    name="archive.content"
+    interface="archive.content.interfaces.IArchiveContentInstalled"
+    />
+</layers>
