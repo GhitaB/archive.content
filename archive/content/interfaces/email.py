@@ -34,6 +34,12 @@ class IArchiveContentInstalled(Interface):
 class IEmail(model.Schema):
     """ Archive Email
     """
+    dexteritytextindexer.searchable('sending_time')
+    sending_time = schema.Datetime(
+        title=u"Sending time",
+        required=True,
+        description=u"Date and time of sending"
+    )
 
     dexteritytextindexer.searchable('email_subject')
     email_subject = schema.TextLine(
@@ -69,6 +75,7 @@ class IEmail(model.Schema):
         description=u'Some details about the context'
     )
 
+    dexteritytextindexer.searchable('priority')
     priority = schema.Choice(
         title=u"Priority",
         description=u'How important the message is',
