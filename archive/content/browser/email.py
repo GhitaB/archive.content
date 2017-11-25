@@ -1,9 +1,6 @@
 from Products.Five.browser import BrowserView
 from archive.content.interfaces.email import PRIORITY_TYPES_VOCAB
-
-
-def human_readable_datetime(datetime_obj):
-    return datetime_obj.strftime("%A %d.%m.%Y %H:%M")
+from archive.content.content.util import human_readable_datetime
 
 
 class EmailView(BrowserView):
