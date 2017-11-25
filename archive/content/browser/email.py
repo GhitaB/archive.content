@@ -1,5 +1,5 @@
 from Products.Five.browser import BrowserView
-from archive.content.interfaces.email import PRIORITY_TYPES_VOCAB
+from archive.content.content.util import PRIORITY_TYPES_VOCAB
 from archive.content.content.util import human_readable_datetime
 
 

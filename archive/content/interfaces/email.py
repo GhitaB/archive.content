@@ -1,29 +1,9 @@
-from collections import OrderedDict
+from archive.content.content.util import PRIORITY_TYPES_VOCAB
 from collective import dexteritytextindexer
 from plone.app.textfield import RichText
 from plone.supermodel import model
 from zope import schema
 from zope.interface import Interface
-from zope.schema.vocabulary import SimpleTerm
-from zope.schema.vocabulary import SimpleVocabulary
-
-
-PRIORITY_TYPES = OrderedDict([
-    (u'1', u'1 - Low'),
-    (u'2', u'2 - Normal'),
-    (u'3', u'3 - Important'),
-    (u'4', u'4 - Very Important'),
-])
-
-
-PRIORITY_TYPES_VOCAB = SimpleVocabulary(
-    [
-        SimpleTerm(
-            value=x,
-            title=PRIORITY_TYPES[x])
-        for x in PRIORITY_TYPES.keys()
-    ]
-)
 
 
 class IArchiveContentInstalled(Interface):
