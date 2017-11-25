@@ -35,6 +35,13 @@ class IEmail(model.Schema):
     """ Archive Email
     """
 
+    dexteritytextindexer.searchable('email_subject')
+    email_subject = schema.TextLine(
+        title=u"Subject",
+        required=True,
+        description=u"Email subject"
+    )
+
     dexteritytextindexer.searchable('sender')
     sender = schema.TextLine(
         title=u"Sender",

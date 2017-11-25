@@ -1,6 +1,14 @@
 <metal:page use-macro="here/main_template/macros/master">
   <metal:content fill-slot="content-core">
 
+    <div class="section email-subject">
+      <h3>Subject</h3>
+      <div tal:condition="python:view.context.email_subject"
+           tal:content="structure python:view.context.email_subject"
+           class="email-subject">
+      </div>
+    </div>
+
     <div class="section sender">
       <h3>Sender</h3>
       <div tal:condition="python:view.context.sender"
