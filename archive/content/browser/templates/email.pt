@@ -1,9 +1,20 @@
 <metal:page use-macro="here/main_template/macros/master">
   <metal:content fill-slot="content-core">
 
-    <div tal:condition="python:view.context.body"
-         tal:content="structure python:view.context.body.output"
-         class="email-body">
+    <div class="section email-body">
+      <h3>Email body</h3>
+      <div tal:condition="python:view.context.body"
+           tal:content="structure python:view.context.body.output"
+           class="email-body">
+      </div>
+    </div>
+
+    <div class="section story">
+      <h3>Story</h3>
+      <div tal:condition="python:view.context.story"
+           tal:content="structure python:view.context.story.output"
+           class="story">
+      </div>
     </div>
 
   </metal:content>
