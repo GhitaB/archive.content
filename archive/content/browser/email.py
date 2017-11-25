@@ -3,7 +3,7 @@ from archive.content.interfaces.email import PRIORITY_TYPES_VOCAB
 
 
 def human_readable_datetime(datetime_obj):
-    return datetime_obj.strftime("%d.%m.%Y %H:%M")
+    return datetime_obj.strftime("%A %d.%m.%Y %H:%M")
 
 
 class EmailView(BrowserView):
