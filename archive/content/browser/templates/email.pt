@@ -44,7 +44,7 @@
     <div class="section priority">
       <h3>Priority</h3>
       <div tal:condition="python:view.context.priority"
-           tal:content="structure python:view.context.priority"
+           tal:content="structure python:view.priority"
            class="priority">
       </div>
     </div>
