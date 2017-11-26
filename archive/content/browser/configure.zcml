@@ -23,4 +23,14 @@
     layer="archive.content.interfaces.email.IArchiveContentInstalled"
     permission="zope2.View"
     />
+
+  <!-- Story view -->
+  <browser:page
+    for="archive.content.interfaces.story.IStory"
+    name="view"
+    template="templates/story.pt"
+    class=".story.StoryView"
+    layer="archive.content.interfaces.email.IArchiveContentInstalled"
+    permission="zope2.View"
+    />
 </configure>

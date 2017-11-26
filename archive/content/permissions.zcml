@@ -11,4 +11,9 @@
     id="archive.content.message.add"
     title="archive.content.message: Add Message"
     />
+
+  <permission
+    id="archive.content.story.add"
+    title="archive.content.story: Add Story"
+    />
 </configure>

@@ -1,0 +1,30 @@
+<metal:page use-macro="here/main_template/macros/master">
+  <metal:content fill-slot="content-core">
+
+    <div class="section writing-time">
+      <h3>Writing time</h3>
+      <div tal:condition="python:view.context.writing_time"
+           tal:content="structure python:view.writing_time"
+           class="writing-time">
+      </div>
+    </div>
+
+    <div class="section story-body">
+      <h3>Story body</h3>
+      <div tal:condition="python:view.context.body"
+           tal:content="structure python:view.context.body.output"
+           class="story-body">
+      </div>
+    </div>
+
+    <div class="section priority">
+      <h3>Priority</h3>
+      <div tal:condition="python:view.context.priority"
+           tal:content="structure python:view.priority"
+           class="priority">
+      </div>
+    </div>
+
+  </metal:content>
+
+</metal:page>
