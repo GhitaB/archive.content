@@ -3,8 +3,8 @@ from archive.content.content.util import PRIORITY_TYPES_VOCAB
 from archive.content.content.util import human_readable_datetime
 
 
-class EmailView(BrowserView):
-    """ Email View
+class MessageView(BrowserView):
+    """ Message View
     """
 
     @property

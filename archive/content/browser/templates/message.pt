@@ -1,0 +1,54 @@
+<metal:page use-macro="here/main_template/macros/master">
+  <metal:content fill-slot="content-core">
+
+    <div class="section sending-time">
+      <h3>Sending time</h3>
+      <div tal:condition="python:view.context.sending_time"
+           tal:content="structure python:view.sending_time"
+           class="sending-time">
+      </div>
+    </div>
+
+    <div class="section sender">
+      <h3>Sender</h3>
+      <div tal:condition="python:view.context.sender"
+           tal:content="structure python:view.context.sender"
+           class="sender">
+      </div>
+    </div>
+
+    <div class="section receiver">
+      <h3>Receiver</h3>
+      <div tal:condition="python:view.context.receiver"
+           tal:content="structure python:view.context.receiver"
+           class="receiver">
+      </div>
+    </div>
+
+    <div class="section message-body">
+      <h3>Message body</h3>
+      <div tal:condition="python:view.context.body"
+           tal:content="structure python:view.context.body.output"
+           class="message-body">
+      </div>
+    </div>
+
+    <div class="section story">
+      <h3>Story</h3>
+      <div tal:condition="python:view.context.story"
+           tal:content="structure python:view.context.story.output"
+           class="story">
+      </div>
+    </div>
+
+    <div class="section priority">
+      <h3>Priority</h3>
+      <div tal:condition="python:view.context.priority"
+           tal:content="structure python:view.priority"
+           class="priority">
+      </div>
+    </div>
+
+  </metal:content>
+
+</metal:page>

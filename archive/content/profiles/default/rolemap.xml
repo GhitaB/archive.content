@@ -6,5 +6,11 @@
       <role name="Contributor" />
       <role name="Site Administrator" />
     </permission>
+
+    <permission name="archive.content.message: Add Message" acquire="False">
+      <role name="Manager" />
+      <role name="Contributor" />
+      <role name="Site Administrator" />
+    </permission>
   </permissions>
 </rolemap>

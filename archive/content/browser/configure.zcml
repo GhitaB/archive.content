@@ -14,4 +14,13 @@
     permission="zope2.View"
     />
 
+  <!-- Message view -->
+  <browser:page
+    for="archive.content.interfaces.message.IMessage"
+    name="view"
+    template="templates/message.pt"
+    class=".message.MessageView"
+    layer="archive.content.interfaces.email.IArchiveContentInstalled"
+    permission="zope2.View"
+    />
 </configure>
