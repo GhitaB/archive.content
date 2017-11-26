@@ -2,10 +2,10 @@
 """
 from zope.interface import implementer
 from archive.content.interfaces.message import IMessage
-from plone.dexterity.content import Item
+from plone.dexterity.content import Container
 
 
 @implementer(IMessage)
-class Message(Item):
+class Message(Container):
     """ Archive Simple Message Item
     """

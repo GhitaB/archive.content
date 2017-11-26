@@ -2,10 +2,10 @@
 """
 from zope.interface import implementer
 from archive.content.interfaces.email import IEmail
-from plone.dexterity.content import Item
+from plone.dexterity.content import Container
 
 
 @implementer(IEmail)
-class Email(Item):
+class Email(Container):
     """ Archive Email Item
     """

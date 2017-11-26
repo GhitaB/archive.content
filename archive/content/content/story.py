@@ -2,10 +2,10 @@
 """
 from zope.interface import implementer
 from archive.content.interfaces.story import IStory
-from plone.dexterity.content import Item
+from plone.dexterity.content import Container
 
 
 @implementer(IStory)
-class Story(Item):
+class Story(Container):
     """ Archive Story Item
     """
