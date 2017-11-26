@@ -17,8 +17,8 @@ class IStory(model.Schema):
 
     dexteritytextindexer.searchable('body')
     body = RichText(
-        title=u'Email Body',
-        description=u'The Message',
+        title=u'Story Body',
+        description=u'The Story',
         required=True
     )
 
