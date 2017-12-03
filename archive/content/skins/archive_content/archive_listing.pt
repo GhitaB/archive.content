@@ -71,6 +71,8 @@
                 <dt metal:define-macro="listitem"
                     tal:attributes="class python:test(item_type == 'Event', 'vevent', '')">
 
+                  <span tal:define="archive_item python:item.getObject()"
+                        tal:attributes="class python:item.portal_type">
                     <span class="summary">
                         <img tal:replace="structure item_icon/html_tag" />
                         <a href="#"
@@ -129,60 +131,59 @@
                                    i18n:name="location">Oslo</span>,
                         </span>
 
-                        <tal:archive_item tal:define="archive_item python:item.getObject()">
-                          <span class="archive-item-details">
-                            <!-- EMAIL -->
-                            <span tal:condition="python:item_type == 'archive.content.email'">
-                              <span tal:content="python:'★' * int(archive_item.priority)"
-                                    class="priority">Priority
-                              </span>
-
-                              <span>
-                                Email (<span tal:replace="python:archive_item.sender[:5].upper()"></span>
-                                ->
-                                <span tal:replace="python:archive_item.receiver[:5].upper()"></span>)
-                              </span>
-
-                              <span tal:content="python:archive_item.sending_time"
-                                    class="sending_time">Sending time
-                              </span>
+                        <span class="archive-item-details">
+                          <!-- EMAIL -->
+                          <span tal:condition="python:item_type == 'archive.content.email'">
+                            <span tal:content="python:'★' * int(archive_item.priority)"
+                                  class="priority">Priority
                             </span>
 
-                            <!-- MESSAGE -->
-                            <span tal:condition="python:item_type == 'archive.content.message'">
-                              <span tal:content="python:'★' * int(archive_item.priority)"
-                                    class="priority">Priority
-                              </span>
-
-                              <span>
-                                Mess. (<span tal:replace="python:archive_item.sender[:5].upper()"></span>
-                                ->
-                                <span tal:replace="python:archive_item.receiver[:5].upper()"></span>)
-                              </span>
-
-                              <span tal:content="python:archive_item.sending_time"
-                                    class="sending_time">Sending time
-                              </span>
+                            <span>
+                              Email (<span tal:replace="python:archive_item.sender[:5].upper()"></span>
+                              ->
+                              <span tal:replace="python:archive_item.receiver[:5].upper()"></span>)
                             </span>
 
-                            <!-- STORY -->
-                            <span tal:condition="python:item_type == 'archive.content.story'">
-                              <span tal:content="python:'★' * int(archive_item.priority)"
-                                    class="priority">Priority
-                              </span>
-
-                              <span>
-                                Story
-                              </span>
-
-                              <span tal:content="python:archive_item.writing_time"
-                                    class="writing_time">Writing time
-                              </span>
+                            <span tal:content="python:archive_item.sending_time"
+                                  class="sending_time">Sending time
                             </span>
                           </span>
-                        </tal:archive_item>
+
+                          <!-- MESSAGE -->
+                          <span tal:condition="python:item_type == 'archive.content.message'">
+                            <span tal:content="python:'★' * int(archive_item.priority)"
+                                  class="priority">Priority
+                            </span>
+
+                            <span>
+                              Mess. (<span tal:replace="python:archive_item.sender[:5].upper()"></span>
+                              ->
+                              <span tal:replace="python:archive_item.receiver[:5].upper()"></span>)
+                            </span>
+
+                            <span tal:content="python:archive_item.sending_time"
+                                  class="sending_time">Sending time
+                            </span>
+                          </span>
+
+                          <!-- STORY -->
+                          <span tal:condition="python:item_type == 'archive.content.story'">
+                            <span tal:content="python:'★' * int(archive_item.priority)"
+                                  class="priority">Priority
+                            </span>
+
+                            <span>
+                              Story
+                            </span>
+
+                            <span tal:content="python:archive_item.writing_time"
+                                  class="writing_time">Writing time
+                            </span>
+                          </span>
+                        </span>
                     </span>
 
+                  </span>
                 </dt>
 
             </metal:block>
