@@ -128,23 +128,32 @@
                         <tal:archive_item tal:define="archive_item python:item.getObject()">
                           <span class="archive-item-details">
                             <!-- EMAIL -->
-                            <span tal:condition="python:item_type == 'archive.content.email' and archive_item.sending_time">
+                            <span tal:condition="python:item_type == 'archive.content.email'">
                               <span tal:content="python:archive_item.sending_time"
                                     class="sending_time">Sending time
+                              </span>
+                              <span tal:content="python:'★' * int(archive_item.priority)"
+                                    class="priority">Priority
                               </span>
                             </span>
 
                             <!-- MESSAGE -->
-                            <span tal:condition="python:item_type == 'archive.content.message' and archive_item.sending_time">
+                            <span tal:condition="python:item_type == 'archive.content.message'">
                               <span tal:content="python:archive_item.sending_time"
                                     class="sending_time">Sending time
+                              </span>
+                              <span tal:content="python:'★' * int(archive_item.priority)"
+                                    class="priority">Priority
                               </span>
                             </span>
 
                             <!-- STORY -->
-                            <span tal:condition="python:item_type == 'archive.content.story' and archive_item.writing_time">
+                            <span tal:condition="python:item_type == 'archive.content.story'">
                               <span tal:content="python:archive_item.writing_time"
                                     class="sending_time">Writing time
+                              </span>
+                              <span tal:content="python:'★' * int(archive_item.priority)"
+                                    class="priority">Priority
                               </span>
                             </span>
                           </span>
