@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+
+    <object name="archive_content" meta_type="Filesystem Directory View"
+            directory="archive.content:skins/archive_content" />
+
+    <skin-path name="*">
+        <layer name="archive_content" insert-after="custom" />
+    </skin-path>
+
+  </object>

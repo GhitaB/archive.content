@@ -12,6 +12,7 @@
   <include package=".upgrades" />
 
   <include file="permissions.zcml" />
+  <include file="skins.zcml" />
 
   <genericsetup:registerProfile
       name="default"

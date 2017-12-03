@@ -16,7 +16,6 @@
       title="Upgrade step for archive.content: import rolemap browserlayer typeinfo"
       import_steps="rolemap browserlayer typeinfo"
       />
-
   </genericsetup:upgradeSteps>
 
   <genericsetup:upgradeSteps
@@ -28,7 +27,6 @@
       title="Upgrade step for archive.content: import typeinfo"
       import_steps="typeinfo"
       />
-
   </genericsetup:upgradeSteps>
 
   <genericsetup:upgradeSteps
@@ -40,7 +38,6 @@
       title="Upgrade step for archive.content: import rolemap browserlayer typeinfo"
       import_steps="rolemap browserlayer typeinfo"
       />
-
   </genericsetup:upgradeSteps>
 
   <genericsetup:upgradeSteps
@@ -52,6 +49,16 @@
       title="Upgrade step for archive.content: import rolemap browserlayer typeinfo"
       import_steps="rolemap browserlayer typeinfo"
       />
+  </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+    source="1.0.3"
+    destination="1.0.4"
+    profile="archive.content:default">
+
+    <genericsetup:upgradeDepends
+      title="Upgrade step for archive.content: import skins"
+      import_steps="skins"
+      />
   </genericsetup:upgradeSteps>
 </configure>
