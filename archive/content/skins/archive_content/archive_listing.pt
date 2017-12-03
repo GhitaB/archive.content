@@ -167,6 +167,10 @@
                               <span tal:content="python:'★' * int(archive_item.priority)"
                                     class="priority">Priority
                               </span>
+
+                              <span>
+                                Story
+                              </span>
                             </span>
                           </span>
                         </tal:archive_item>
