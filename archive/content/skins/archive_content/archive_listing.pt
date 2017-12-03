@@ -135,6 +135,12 @@
                               <span tal:content="python:'★' * int(archive_item.priority)"
                                     class="priority">Priority
                               </span>
+
+                              <span>
+                                Email (<span tal:replace="python:archive_item.sender[:5].upper()"></span>
+                                ->
+                                <span tal:replace="python:archive_item.receiver[:5].upper()"></span>)
+                              </span>
                             </span>
 
                             <!-- MESSAGE -->
@@ -144,6 +150,12 @@
                               </span>
                               <span tal:content="python:'★' * int(archive_item.priority)"
                                     class="priority">Priority
+                              </span>
+
+                              <span>
+                                Message (<span tal:replace="python:archive_item.sender[:5].upper()"></span>
+                                ->
+                                <span tal:replace="python:archive_item.receiver[:5].upper()"></span>)
                               </span>
                             </span>
 
