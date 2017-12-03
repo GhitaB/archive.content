@@ -134,7 +134,7 @@
                         <span class="archive-item-details">
                           <!-- EMAIL -->
                           <span tal:condition="python:item_type == 'archive.content.email'">
-                            <span tal:content="python:'★' * int(archive_item.priority)"
+                            <span tal:content="python:''.join((['★' for x in range(0, int(archive_item.priority))] + ['☆', '☆', '☆'])[:4])"
                                   class="priority">Priority
                             </span>
 
@@ -151,7 +151,7 @@
 
                           <!-- MESSAGE -->
                           <span tal:condition="python:item_type == 'archive.content.message'">
-                            <span tal:content="python:'★' * int(archive_item.priority)"
+                            <span tal:content="python:''.join((['★' for x in range(0, int(archive_item.priority))] + ['☆', '☆', '☆'])[:4])"
                                   class="priority">Priority
                             </span>
 
@@ -168,7 +168,7 @@
 
                           <!-- STORY -->
                           <span tal:condition="python:item_type == 'archive.content.story'">
-                            <span tal:content="python:'★' * int(archive_item.priority)"
+                            <span tal:content="python:''.join((['★' for x in range(0, int(archive_item.priority))] + ['☆', '☆', '☆'])[:4])"
                                   class="priority">Priority
                             </span>
 
