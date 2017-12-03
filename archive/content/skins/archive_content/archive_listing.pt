@@ -126,11 +126,28 @@
                         &mdash;
 
                         <tal:archive_item tal:define="archive_item python:item.getObject()">
-                        <span tal:condition="python:item_type == 'archive.content.email' and archive_item.sending_time">
-                            <span tal:content="python:archive_item.sending_time"
-                                  class="sending_time">Sending time
+                          <span class="archive-item-details">
+                            <!-- EMAIL -->
+                            <span tal:condition="python:item_type == 'archive.content.email' and archive_item.sending_time">
+                              <span tal:content="python:archive_item.sending_time"
+                                    class="sending_time">Sending time
+                              </span>
                             </span>
-                        </span>
+
+                            <!-- MESSAGE -->
+                            <span tal:condition="python:item_type == 'archive.content.message' and archive_item.sending_time">
+                              <span tal:content="python:archive_item.sending_time"
+                                    class="sending_time">Sending time
+                              </span>
+                            </span>
+
+                            <!-- STORY -->
+                            <span tal:condition="python:item_type == 'archive.content.story' and archive_item.writing_time">
+                              <span tal:content="python:archive_item.writing_time"
+                                    class="sending_time">Writing time
+                              </span>
+                            </span>
+                          </span>
                         </tal:archive_item>
                     </span>
 
