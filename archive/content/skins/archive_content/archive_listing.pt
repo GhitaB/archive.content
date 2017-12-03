@@ -139,9 +139,9 @@
                             </span>
 
                             <span>
-                              Email (<span tal:replace="python:archive_item.sender[:5].upper()"></span>
-                              ->
-                              <span tal:replace="python:archive_item.receiver[:5].upper()"></span>)
+                              Email (<span tal:replace="python:archive_item.sender[:2].upper()"></span>
+                              -
+                              <span tal:replace="python:archive_item.receiver[:2].upper()"></span>)
                             </span>
 
                             <span tal:content="python:archive_item.sending_time"
@@ -156,9 +156,9 @@
                             </span>
 
                             <span>
-                              Mess. (<span tal:replace="python:archive_item.sender[:5].upper()"></span>
-                              ->
-                              <span tal:replace="python:archive_item.receiver[:5].upper()"></span>)
+                              Mess. (<span tal:replace="python:archive_item.sender[:2].upper()"></span>
+                              -
+                              <span tal:replace="python:archive_item.receiver[:2].upper()"></span>)
                             </span>
 
                             <span tal:content="python:archive_item.sending_time"
