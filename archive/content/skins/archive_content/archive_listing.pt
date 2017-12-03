@@ -79,6 +79,12 @@
                            tal:content="item_title_or_id">
                             Item Title
                         </a>
+
+                        <span class="description"
+                            tal:condition="item_description"
+                            tal:content="item_description">
+                            Description
+                        </span>
                     </span>
 
                     <span class="documentByLine">
@@ -122,8 +128,6 @@
                                    class="location"
                                    i18n:name="location">Oslo</span>,
                         </span>
-
-                        &mdash;
 
                         <tal:archive_item tal:define="archive_item python:item.getObject()">
                           <span class="archive-item-details">
@@ -178,13 +182,6 @@
 
                 </dt>
 
-                <dd>
-                    <span class="description"
-                        tal:condition="item_description"
-                        tal:content="item_description">
-                        Description
-                    </span>
-                </dd>
             </metal:block>
             </tal:block>
             </tal:entry>
