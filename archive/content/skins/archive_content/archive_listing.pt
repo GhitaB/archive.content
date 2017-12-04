@@ -74,7 +74,10 @@
                   <span tal:define="archive_item python:item.getObject()"
                         tal:attributes="class python:item.portal_type">
                     <span class="summary">
-                        <img tal:replace="structure item_icon/html_tag" />
+                        <span class="archive-item-counter"
+                              tal:content="repeat/item/index">
+                          002
+                        </span>
                         <a href="#"
                            tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url);
                                            class string:$item_type_class $item_wf_state_class url"
