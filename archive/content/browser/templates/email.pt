@@ -57,6 +57,16 @@
       </div>
     </div>
 
+    <tal:listing>
+      <div class="section folder-contents" tal:define="folderContents python:context.getFolderContents();"
+           tal:condition="folderContents">
+        <h3>Contents</h3>
+        <metal:content metal:use-macro="here/folder_tabular_view/macros/listing" >
+          <metal:fill fill-slot="long_description"></metal:fill>
+        </metal:content>
+      </div>
+    </tal:listing>
+
   </metal:content>
 
 </metal:page>
